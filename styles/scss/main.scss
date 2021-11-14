@@ -1,0 +1,101 @@
+@use "./Variables/global";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: global.$Very-dark-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 327px;
+  height: 780px;
+  border-bottom-right-radius: 10px ;
+  border-bottom-left-radius: 10px;
+  background-color: global.$Dark-desaturated-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: global.$Soft-violet;
+    background-image: url(../../images/image-header-mobile.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 100%;
+    min-height: 240px;
+  }
+
+  &__body {
+    height: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &_h1 {
+      font-family: global.$Family1;
+      font-weight: bold;
+      font-size: 15px;
+      color: global.$White;
+      text-align: center;
+      align-self: center;
+
+      & span {
+        color: global.$Soft-violet;
+      }
+    }
+
+    &_p {
+      font-family: global.$Family1;
+      font-weight: thin;
+      color: global.$Slightly-transparent-white;
+      width: 90%;
+      font-size: global.$Font-size; 
+      line-height: 1.5rem;
+      text-align: center;
+      align-self: center;
+    }
+
+    &_info{
+      width: 82px;
+      height: 207px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      
+      &_data{
+        text-align: center;
+      }
+      
+      &_data > p:first-child{
+        font-family: global.$Family1;
+        font-size: 1.5rem;
+        font-weight: global.$Weight-2; 
+        color: white;
+        margin-bottom: .5rem;
+      }
+      
+      &_data > p:last-child{
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        font-family: global.$Family2;
+        font-weight: thin;
+        color: global.$Slightly-transparent-white;
+      }
+    }
+  }
+}

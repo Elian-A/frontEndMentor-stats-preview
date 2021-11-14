@@ -1,0 +1,101 @@
+/* Layout */
+/* The designs were created to the following widths: */
+/* Primary Colors */
+/* Neutral Colors */
+/* Typography */
+/* Body Copy */
+/* Font */
+/* [Inter](https://fonts.google.com/specimen/Inter) */
+/* [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca) */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #090b1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 327px;
+  height: 780px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #1b1938;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #aa5cdb;
+  background-image: url(../../images/image-header-mobile.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 100%;
+  min-height: 240px;
+}
+.card__body {
+  height: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card__body_h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  align-self: center;
+}
+.card__body_h1 span {
+  color: #aa5cdb;
+}
+.card__body_p {
+  font-family: "Inter", sans-serif;
+  font-weight: thin;
+  color: rgba(255, 255, 255, 0.6);
+  width: 90%;
+  font-size: 15px;
+  line-height: 1.5rem;
+  text-align: center;
+  align-self: center;
+}
+.card__body_info {
+  width: 82px;
+  height: 207px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__body_info_data {
+  text-align: center;
+}
+.card__body_info_data > p:first-child {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.card__body_info_data > p:last-child {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: thin;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*# sourceMappingURL=styles.css.map */
