@@ -19,7 +19,7 @@ body {
 .card {
   width: 327px;
   height: 780px;
-  border-bottom-right-radius: 10px ;
+  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: global.$Dark-desaturated-blue;
   display: flex;
@@ -45,56 +45,140 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    &_h1 {
+    &_text > h1{
       font-family: global.$Family1;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 30px;
       color: global.$White;
+      margin-bottom: 20px;
       text-align: center;
-      align-self: center;
 
       & span {
         color: global.$Soft-violet;
       }
     }
 
-    &_p {
+    &_text > p{
       font-family: global.$Family1;
       font-weight: thin;
       color: global.$Slightly-transparent-white;
-      width: 90%;
-      font-size: global.$Font-size; 
+      width: 100%;
+      font-size: global.$Font-size;
       line-height: 1.5rem;
       text-align: center;
-      align-self: center;
     }
 
-    &_info{
+    &_info {
       width: 82px;
       height: 207px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      
-      &_data{
+
+      &_data {
         text-align: center;
       }
-      
-      &_data > p:first-child{
+
+      &_data > p:first-child {
         font-family: global.$Family1;
         font-size: 1.5rem;
-        font-weight: global.$Weight-2; 
+        font-weight: global.$Weight-2;
         color: white;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
       }
-      
-      &_data > p:last-child{
+
+      &_data > p:last-child {
         font-size: 0.8rem;
         letter-spacing: 1px;
         font-family: global.$Family2;
         font-weight: thin;
         color: global.$Slightly-transparent-white;
+      }
+    }
+  }
+}
+
+@media (min-width: global.$Desktop) {
+  .card {
+    width: 1106px;
+    height: 445px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: global.$Dark-desaturated-blue;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    &__image {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: global.$Soft-violet;
+      background-image: url(../../images/image-header-desktop.jpg);
+      background-size: cover;
+      background-blend-mode: multiply;
+      max-width: 540px;
+      height: 100%;
+    }
+
+    &__body {
+      max-width: 378px;
+      height: 307px;
+      margin-left: 78px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &_text > h1 {
+        font-family: global.$Family1;
+        font-weight: bold;
+        color: global.$White;
+        text-align: start;
+        margin-bottom: 2rem;
+
+        & span {
+          color: global.$Soft-violet;
+        }
+      }
+
+      &_text > p {
+        font-family: global.$Family1;
+        font-weight: thin;
+        color: global.$Slightly-transparent-white;
+        width: 100%;
+        font-size: global.$Font-size;
+        line-height: 1.5rem;
+        text-align: start;
+      }
+
+      &_info {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &_data {
+          text-align: center;
+        }
+
+        &_data > p:first-child {
+          font-family: global.$Family1;
+          font-size: 1.5rem;
+          font-weight: global.$Weight-2;
+          color: white;
+          margin-right: 0.5rem;
+        }
+
+        &_data > p:last-child {
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          font-family: global.$Family2;
+          font-weight: thin;
+          color: global.$Slightly-transparent-white;
+        }
       }
     }
   }
